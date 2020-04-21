@@ -1,0 +1,77 @@
+#Baseline run configuration
+base:
+  workers: 4
+  train_batch: 128
+  test_batch: 100
+  epochs: 19
+  learning_rate: 0.1
+  schedule: '55 131'
+  resume: ''
+  print_freq: 100
+  save_dir: './output/cifar100/vgg13'
+  save_every: 20
+  ite_enable_mixup: 5
+  mixup: False
+  alpha: 0.3
+  smooth: False
+  smooth_eps: 0.1
+
+# PatternTrain configuration
+pt: 
+  num_patterns: 4
+  epoch_choose_p_k: 2
+  epoch_hard_prune_p_k: 4  
+  # epoch_choose_p_k: 60
+  # epoch_hard_prune_p_k: 148
+  grp_lasso_coeff: 0.00025
+
+prune_ratios:
+# 4.3x 0.00065 xx s 55 136 p_k 54 149
+# 4.3x 0.00085 xx s 55 131 p_k 60 146
+  module.feature.3.weight: 15
+  module.feature.7.weight: 30
+  module.feature.10.weight: 35
+  module.feature.14.weight: 35
+  module.feature.17.weight: 40
+  module.feature.21.weight: 45
+  module.feature.24.weight: 45
+  module.feature.28.weight: 50
+  module.feature.31.weight: 55
+
+# prune_ratios:
+# 6.2x 0.00065 72.76 s 55 131 p_k 60 148
+# 6.2x 0.00075 72.86 s 55 131 p_k 60 146
+# 6.2x 0.00095 72.65 s 55 131 p_k 60 148
+# 6.2x 0.00015 72.44 s 55 131 p_k 60 148
+# 6.2x 0.00025 73.35 s 55 131 p_k 60 148
+
+
+# run_script.py --data-path /path/to/dataset --dataset cifar10 --arch vgg13 --num-gpus 1 --gpu-list 0
+  # module.feature.3.weight: 25
+  # module.feature.7.weight: 45
+  # module.feature.10.weight: 55
+  # module.feature.14.weight: 55
+  # module.feature.17.weight: 55
+  # module.feature.21.weight: 65
+  # module.feature.24.weight: 65
+  # module.feature.28.weight: 65
+  # module.feature.31.weight: 65
+
+
+
+# prune_ratios:
+# 8.5x 0.00055 72.0 s 55 131 p_k 65 143
+# 8.5x 0.00065 72.01 s 55 131 p_k 65 143
+# 8.5x 0.00075 71.9 s 55 131 p_k 60 152
+# 8.5x 0.00075 72.7 s 55 131 p_k 60 146
+# 8.5x 0.00095 72.0 s 55 131 p_k 65 143
+
+#   module.feature.3.weight: 35
+#   module.feature.7.weight: 55
+#   module.feature.10.weight: 65
+#   module.feature.14.weight: 65
+#   module.feature.17.weight: 65
+#   module.feature.21.weight: 75
+#   module.feature.24.weight: 75
+#   module.feature.28.weight: 75
+#   module.feature.31.weight: 75

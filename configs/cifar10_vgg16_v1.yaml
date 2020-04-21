@@ -1,0 +1,54 @@
+#Baseline run configuration
+base:
+  workers: 4
+  train_batch: 128
+  test_batch: 100
+  epochs: 190
+  learning_rate: 0.1
+  schedule: '55 131'
+  resume: ''
+  print_freq: 100
+  save_dir: './output/cifar10/vgg16'
+  save_every: 20
+  ite_enable_mixup: 0
+  mixup: False
+  alpha: 0.3
+  smooth: False
+  smooth_eps: 0.1
+
+# PatternTrain configuration
+pt: 
+  num_patterns: 12
+  # epoch_choose_p_k: 2
+  # epoch_hard_prune_p_k: 4 
+  epoch_choose_p_k: 150
+  epoch_hard_prune_p_k: 163
+  grp_lasso_coeff: 0.00015
+
+# prune_ratios:
+#   module.feature.3.weight: 35
+#   module.feature.7.weight: 45
+#   module.feature.10.weight: 45
+#   module.feature.14.weight: 45
+#   module.feature.17.weight: 45
+#   module.feature.20.weight: 45
+#   module.feature.24.weight: 45
+#   module.feature.27.weight: 55
+#   module.feature.30.weight: 55
+#   module.feature.34.weight: 65
+#   module.feature.37.weight: 75
+#   module.feature.40.weight: 75
+
+prune_ratios:
+  module.feature.3.weight: 35
+  module.feature.7.weight: 45
+  module.feature.10.weight: 55
+  module.feature.14.weight: 55
+  module.feature.17.weight: 55
+  module.feature.20.weight: 65
+  module.feature.24.weight: 65
+  module.feature.27.weight: 65
+  module.feature.30.weight: 75
+  module.feature.34.weight: 80
+  module.feature.37.weight: 85
+  module.feature.40.weight: 85
