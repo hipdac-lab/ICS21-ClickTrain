@@ -14,7 +14,7 @@ conda install pytorch torchvision cudatoolkit=9.2 -c pytorch
 
 ```
 
-#parameter
+# Parameter
 ```
 --data-path: path to dataset
 --dataset: supported dataset name (cifar10, cifar100, imagenet)
