@@ -1,6 +1,8 @@
 # PatternTrain: Fast and Accurate DNN Training via Dynamic Fine-Grained Pattern-Based Pruning
 ---
-This repository is the software artifact for PatternTrain paper, which aims to use fine-grained pattern-based pruning to achieve (1) high training peformance (low training FLOPs), (2) high accuracy, and (3) high compression ratio (low inference FLOPs). The repository contains the codes to efficiently and accurately train ResNet and VGG models for CIFAR-10, CIFAR-100, and ImageNet (ILSVRC 2012) datasets.
+
+## About PruneTrain
+This repository contains the source codes and scripts for training a set of DNNs using PatternTrain, which is deisgned for (1) high training peformance (low training FLOPs), (2) high accuracy, and (3) high compression ratio (low inference FLOPs) by using dynamic fine-grained pattern-based pruning. We provide the codes to efficiently and accurately train ResNet and VGG models for CIFAR-10, CIFAR-100, and ImageNet (ILSVRC 2012) datasets.
 
 ## Prerequisites
 ```
