@@ -6,6 +6,7 @@ This repository is the software artifact for PatternTrain paper, which aims to u
 ```
 Python 3.6+
 PyTorch 1.0+
+NVIDIA CUDA 9.0+
 ```
 
 ## Installation (via Anaconda)
@@ -27,10 +28,10 @@ conda install pytorch torchvision cudatoolkit=9.2 -c pytorch
 ## Training Example
 - Training ResNet-32 model on CIFAR-10 dataset with two GPUs. 
 ```
-python run_script.py --data-path /path/to/dataset --dataset cifar10 --arch resnet32 --num-gpus 2 --gpu-list 0 1
+python3 run_script.py --data-path /path/to/dataset --dataset cifar10 --arch resnet32 --num-gpus 2 --gpu-list 0 1
 ```
 
 - Training ResNet-50 model on ImageNet dataset with four GPUs.
 ```
-python run_script.py --data-path /path/to/ilsvrc12 --dataset imagenet --arch resnet50 --num-gpus 4 --gpu-list 0 1 2 3
+python3 run_script.py --data-path /path/to/ilsvrc12 --dataset imagenet --arch resnet50 --num-gpus 4 --gpu-list 0 1 2 3
 ```
