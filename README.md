@@ -1,20 +1,21 @@
-PatternTrain: Fast and Accurate DNN Training via Dynamic Fine-Grained Pattern-Based Pruning
+# PatternTrain: Fast and Accurate DNN Training via Dynamic Fine-Grained Pattern-Based Pruning
 ---
+This repository is the software artifact for PatternTrain paper, which aims to use fine-grained pattern-based pruning to achieve (1) high training peformance (low training FLOPs), (2) high accuracy, and (3) high compression ratio (low inference FLOPs). The repository contains the codes to efficiently and accurately train ResNet and VGG models for CIFAR-10, CIFAR-100, and ImageNet (ILSVRC 2012) datasets.
 
-# Prerequisites
+## Prerequisites
 ```
 Python 3.6+
 PyTorch 1.0+
 ```
 
-# Installation
+## Installation (via Anaconda)
 ```
 bash Anaconda-latest-Linux-x86_64.sh
 conda install pytorch torchvision cudatoolkit=9.2 -c pytorch
 
 ```
 
-# Parameter
+## Parameter
 ```
 --data-path: path to dataset
 --dataset: supported dataset name (cifar10, cifar100, imagenet)
@@ -23,9 +24,13 @@ conda install pytorch torchvision cudatoolkit=9.2 -c pytorch
 --gpu-list: the desired gpu(s) list
 ```
 
-# Run example
+## Training Example
+- Training ResNet-32 model on CIFAR-10 dataset with two GPUs. 
 ```
 python run_script.py --data-path /path/to/dataset --dataset cifar10 --arch resnet32 --num-gpus 2 --gpu-list 0 1
+```
 
+- Training ResNet-50 model on ImageNet dataset with four GPUs.
+```
 python run_script.py --data-path /path/to/ilsvrc12 --dataset imagenet --arch resnet50 --num-gpus 4 --gpu-list 0 1 2 3
 ```
