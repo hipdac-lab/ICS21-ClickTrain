@@ -23,6 +23,17 @@ bash Anaconda3-2020.02-Linux-x86_64.sh
 conda install pytorch torchvision cudatoolkit=9.2 -c pytorch
 ```
 
+## Data Preparation
+- Prepare CIFAR-10/100 datasets 
+```
+wget 
+```
+
+- Prepare ImageNet dataset
+```
+wget
+```
+
 ## Parameter and Argument
 - --data-path: path to dataset
 - --dataset: supported dataset name (cifar10, cifar100, imagenet)
