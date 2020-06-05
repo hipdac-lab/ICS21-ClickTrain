@@ -26,13 +26,13 @@ conda install pytorch torchvision cudatoolkit=9.2 -c pytorch
 ## Data Preparation
 - Prepare CIFAR-10/100 datasets 
 ```
-wget 
+wget https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz
+tar -xzvf cifar-10-python.tar.gz
+wget https://www.cs.toronto.edu/~kriz/cifar-100-python.tar.gz
+tar -xzvf cifar-100-python.tar.gz
 ```
 
-- Prepare ImageNet dataset
-```
-wget
-```
+- Download ImageNet dataset at http://www.image-net.org/
 
 ## Parameter and Argument
 - --data-path: path to dataset
@@ -51,3 +51,5 @@ python3 run_script.py --data-path /path/to/dataset --dataset cifar10 --arch resn
 ```
 python3 run_script.py --data-path /path/to/ilsvrc12 --dataset imagenet --arch resnet50 --num-gpus 4 --gpu-list 0 1 2 3
 ```
+## Online Publiic Repository
+The code and instructions can be also accessed via 
