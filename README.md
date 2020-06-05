@@ -52,4 +52,4 @@ python3 run_script.py --data-path /path/to/dataset --dataset cifar10 --arch resn
 python3 run_script.py --data-path /path/to/ilsvrc12 --dataset imagenet --arch resnet50 --num-gpus 4 --gpu-list 0 1 2 3
 ```
 ## Online Publiic Repository
-The code and instructions can be also accessed via https://anonymous.4open.science/r/a756802d-6618-43ff-a170-51174b0ad7eb/.
+The code and instructions can be also accessed at https://anonymous.4open.science/r/a756802d-6618-43ff-a170-51174b0ad7eb/.
