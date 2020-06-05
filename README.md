@@ -1,4 +1,4 @@
-# PatternTrain: Fast and Accurate DNN Training via Dynamic Fine-Grained Pattern-Based Pruning
+# PatternTrain: Fast and Accurate Deep CNN Training via Dynamic Fine-Grained Pattern-Based Pruning
 ---
 
 ## About PatternTrain
@@ -26,7 +26,7 @@ conda install pytorch torchvision cudatoolkit=9.2 -c pytorch
 ## Parameter and Argument
 - --data-path: path to dataset
 - --dataset: supported dataset name (cifar10, cifar100, imagenet)
-- --arch: supported neural network architecture (vgg11, vgg13, resnet32 resnet50)
+- --arch: supported neural network architecture (vgg11, vgg13, resnet32, resnet50)
 - --num-gpus: the number of gpu(s)
 - --gpu-list: the desired gpu(s) list
 
