@@ -1,7 +1,7 @@
-# PatternTrain: Fast and Accurate Deep CNN Training via Dynamic Fine-Grained Pattern-Based Pruning
+# ClickTrain: Enabling Efficient and Accurate End-to-End Deep Learning Training via Patter-Based Pruning
 ---
 
-## About PatternTrain
+## About ClickTrain
 This repository contains the source codes and scripts for training a set of DNNs using PatternTrain, which is deisgned for (1) high training peformance (low training FLOPs), (2) high accuracy, and (3) high compression ratio (low inference FLOPs) by using dynamic fine-grained pattern-based pruning. We provide the codes to efficiently and accurately train ResNet and VGG models for CIFAR-10, CIFAR-100, and ImageNet (ILSVRC 2012) datasets.
 
 ## Prerequisites
