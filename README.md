@@ -1,5 +1,6 @@
 # ClickTrain: Enabling Efficient and Accurate End-to-End Deep Learning Training via Patter-Based Pruning
----
+
+by Chengming Zhang[chengming.zhang@wsu.edu] and Dingwen Tao [dingwen.tao@wsu.edu]
 
 ## About ClickTrain
 This repository contains the source codes and scripts for training a set of DNNs using PatternTrain, which is deisgned for (1) high training peformance (low training FLOPs), (2) high accuracy, and (3) high compression ratio (low inference FLOPs) by using dynamic fine-grained pattern-based pruning. We provide the codes to efficiently and accurately train ResNet and VGG models for CIFAR-10, CIFAR-100, and ImageNet (ILSVRC 2012) datasets.
@@ -51,5 +52,3 @@ python3 run_script.py --data-path /path/to/dataset --dataset cifar10 --arch resn
 ```
 python3 run_script.py --data-path /path/to/ilsvrc12 --dataset imagenet --arch resnet50 --num-gpus 4 --gpu-list 0 1 2 3
 ```
-## Online Publiic Repository
-The code and instructions can be also accessed at https://anonymous.4open.science/r/8808d2ff-36e5-42e8-a688-8f856b37dc56/.
